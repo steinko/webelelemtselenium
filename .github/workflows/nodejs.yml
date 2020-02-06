@@ -19,11 +19,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: install
-      working-directory: ./frontend:
+      working-directory: ./frontend
       run: npm install
       
     - name: test
-      working-directory: ./frontend:  
+      working-directory: ./frontend  
     - run: npm test
       
       env:
