@@ -24,7 +24,7 @@ jobs:
       
     - name: test
       working-directory: ./frontend  
-    - run: npm test
+      run: npm test
       
       env:
         CI: true
