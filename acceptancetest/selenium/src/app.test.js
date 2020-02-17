@@ -9,6 +9,22 @@ beforeAll( async () =>  {
  })
 
 it('should display react app', async () => {
-	 const react = await driver.findElement(By.className('App-link'))
-	 expect(await react.getText()).toContain('Learn React')
+	expect(await driver.findElement(By.className('App'))).not.toBeNull()
 })
+
+
+
+it('should av selected from desination and to destination' ,async () => {
+	const from = await driver.findElement(By.id('from'))
+	expect(from).not.toBeNull()
+	from.clear()
+	from.sendKeys('OSL')
+	//expect(from.getText()).toBe('OSL')
+	const to = await driver.findElement(By.id('to'))
+	to.clear()
+	to.sendKeys('FRA')
+	//expect(from.getText()).toBe('FRA')
+})
+
+
+
