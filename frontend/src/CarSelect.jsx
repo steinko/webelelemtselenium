@@ -1,19 +1,29 @@
 import React , {Component} from 'react';
 
 class CarSelect extends Component {
+
+   constructor(props) {
+      super(props)
+      this.state = {value: ''}
+      this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(event) {
+      this.setState({value: event.target.value});
+    }
+    
    render() {
          return (
-           <div>
-
-           <label for="cars">Choose a car  :  </label>
-
-           <select id="cars">
-               <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
+           <form>
+           <label >Choose a car  : 
+              <select id="cars" value= {this.state.value} onChange= {this.handleChange}>
+                 <option id="volvo" value="volvo">Volvo</option>
+                 <option id="saab" value="saab">Saab</option>
+                 <option id="mercedes" value="mercedes">Mercedes</option>
+                 <option id="audi" value="audi">Audi</option>
             </select>
-         </div>
+           </label>
+         </form>
        )
      }
 }

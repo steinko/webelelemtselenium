@@ -26,5 +26,21 @@ it('should av selected from desination and to destination' ,async () => {
 	//expect(from.getText()).toBe('FRA')
 })
 
+it('should av selected Audi' ,async () => { 
+	
+	const cars = await driver.findElement(By.id('cars'))
+	   const options = await driver.findElement(By.id('audi'))
+	   await options.click()
+       expect(await cars.getAttribute('value')).toBe('audi')
+})
+
+it('should have selected Jupiter' ,async () => { 
+	
+	const planets = await driver.findElement(By.id('planets'))
+	   const options = await driver.findElement(By.id('Jupiter'))
+	   await options.click()
+       expect(await planets.getAttribute('value')).toBe('Jupiter')
+})
+
 
 
