@@ -12,6 +12,6 @@ it('should exits' , () => {
 
 it('should have selecte value Fish' , async () => {
 	const {getByLabelText,getByRole} = render(<Food />)
-	await selectEvent.select(getByLabelText("Food"), "Fish");
+	await selectEvent.select(getByLabelText(/Food/), "Fish");
 	expect(getByRole("form")).toHaveFormValues({ food: "2" })
  })
