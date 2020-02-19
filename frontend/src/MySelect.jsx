@@ -8,7 +8,7 @@ const options = [
 ]
 
 const MySelect = () => (
-    <label htmlFor= "food">Food
+    <label>Food
         <Select options={options}  name="food" inputId="food"/>
     </label> 
     )
