@@ -3,6 +3,7 @@ import React from 'react';
 import CarSelect from './CarSelect'
 import Flight from './Flight'
 import Planets from './Planets'
+import Food from './Food'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <CarSelect />
       <Flight />
       <Planets />
+      <Food />
     </div>
   );
 }

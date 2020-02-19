@@ -42,5 +42,13 @@ it('should have selected Jupiter' ,async () => {
        expect(await planets.getAttribute('value')).toBe('Jupiter')
 })
 
+it('should have selected Fish' ,async () => { 
+	
+	const food = await driver.findElement(By.id('food'))
+	   const options = await driver.findElement(By.id('Fish'))
+	   await options.click()
+       expect(await food.getAttribute('value')).toBe('Fish')
+})
+
 
 

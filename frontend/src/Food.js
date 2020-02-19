@@ -2,10 +2,10 @@ import React , {Component} from 'react';
 import Select from 'react-select';
 
 export const options = [
-			        { value: '1' , label: '1'}, 
-              { value: '2' , label: '2'},
-              { value: '3' , label: '3'},
-			        { value: '4' , label: '4'}
+			        { value: '1' , label: 'Pasta'}, 
+              { value: '2' , label: 'Fish'},
+              { value: '3' , label: 'Meat'},
+			        { value: '4' , label: 'Cheese'}
 			]
 
 
@@ -26,16 +26,16 @@ class Food extends Component {
 		const { selectedOption } = this.state;
 		return (
           <form>
-			  <label htmlFor= "food">Food</label> 
-
-		<Select 
-		   name = 'food'
-		   inputId = 'food'
-		   value = {selectedOption}
-		   onChange = {this.handleChange}   
-		   options = {options}
-		/> 
-		</form>
+			      <label>Food 
+		           <Select 
+		             name = 'food'
+		             inputId = 'food'
+		             value = {selectedOption}
+		             onChange = {this.handleChange}   
+		             options = {options}
+		          /> 
+					  </label> 
+	       	</form>
 		)
 	}
 }
