@@ -8,10 +8,9 @@ const options = [
 ]
 
 const MySelect = () => (
-  <form>
-    <label htmlFor= "food">Food</label> 
-    <Select options={options}  name="food" inputId="food"/>
-  </form>
-)
+    <label htmlFor= "food">Food
+        <Select options={options}  name="food" inputId="food"/>
+    </label> 
+    )
 
 export default MySelect

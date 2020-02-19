@@ -12,20 +12,16 @@ export const options = [
 class Food extends Component {
 
 	state = {
-    selectedOption: null,
+    selectedOption: '',
   }
 
   handleChange = selectedOption => {
-    this.setState(
-      { selectedOption },
-      () => console.log(`Option selected:`, this.state.selectedOption)
-    )
+    this.setState({ selectedOption })
   }
 
 	render() { 
 		const { selectedOption } = this.state;
 		return (
-          <form>
 			      <label>Food 
 		           <Select 
 		             name = 'food'
@@ -35,7 +31,6 @@ class Food extends Component {
 		             options = {options}
 		          /> 
 					  </label> 
-	       	</form>
 		)
 	}
 }

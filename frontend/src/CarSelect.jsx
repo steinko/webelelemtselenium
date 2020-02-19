@@ -13,8 +13,7 @@ class CarSelect extends Component {
     }
     
    render() {
-         return (
-           <form>
+         return ( 
            <label >Choose a car  : 
               <select id="cars" value= {this.state.value} onChange= {this.handleChange}>
                  <option id="volvo" value="volvo">Volvo</option>
@@ -23,7 +22,6 @@ class CarSelect extends Component {
                  <option id="audi" value="audi">Audi</option>
             </select>
            </label>
-         </form>
        )
      }
 }
