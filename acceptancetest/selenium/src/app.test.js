@@ -42,12 +42,23 @@ it('should have selected Jupiter' ,async () => {
        expect(await planets.getAttribute('value')).toBe('Jupiter')
 })
 
-it('should have selected Fish' ,async () => { 
+xit('should have selected Fish' ,async () => { 
 	
 	const food = await driver.findElement(By.id('food'))
 	   const options = await driver.findElement(By.id('Fish'))
 	   await options.click()
        expect(await food.getAttribute('value')).toBe('Fish')
+})
+
+it('should have a list of numbres ' ,async () => { 
+	let i
+	const numberList = await driver.findElement(By.id('numberlist'))
+	expect(numberList).not.toBeNull()
+	const listElement = await numberList.findElements(By.tagName('li'))
+	expect(listElement.length).toBe(5)
+	for(i=0; i<listElement.length; i++)
+	   expect(await listElement[i].getText()).toBe(i.toString())
+	
 })
 
 
