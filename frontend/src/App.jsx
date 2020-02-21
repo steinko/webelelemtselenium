@@ -5,6 +5,8 @@ import Flight from './Flight'
 import Planets from './Planets'
 import Food from './Food'
 import NumberList from './NumberList'
+import Name from './Name'
+
 const numbers = [0,1, 2, 3, 4];
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
       <Planets />
       <Food />
       <NumberList numbers={numbers}/>
+      <Name/>
     </div>
   );
 }

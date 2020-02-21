@@ -37,17 +37,17 @@ it('should av selected Audi' ,async () => {
 it('should have selected Jupiter' ,async () => { 
 	
 	const planets = await driver.findElement(By.id('planets'))
-	   const options = await driver.findElement(By.id('Jupiter'))
-	   await options.click()
-       expect(await planets.getAttribute('value')).toBe('Jupiter')
+	const options = await driver.findElement(By.id('Jupiter'))
+	await options.click()
+    expect(await planets.getAttribute('value')).toBe('Jupiter')
 })
 
 xit('should have selected Fish' ,async () => { 
 	
 	const food = await driver.findElement(By.id('food'))
-	   const options = await driver.findElement(By.id('Fish'))
-	   await options.click()
-       expect(await food.getAttribute('value')).toBe('Fish')
+	const options = await driver.findElement(By.id('Fish'))
+	await options.click()
+    expect(await food.getAttribute('value')).toBe('Fish')
 })
 
 it('should have a list of numbres ' ,async () => { 
@@ -58,8 +58,24 @@ it('should have a list of numbres ' ,async () => {
 	expect(listElement.length).toBe(5)
 	for(i=0; i<listElement.length; i++)
 	   expect(await listElement[i].getText()).toBe(i.toString())
-	
 })
+
+
+it('should display enterd name' ,async () => { 
+	const name = await driver.findElement(By.id('name'))
+	name.sendKeys('Stein')
+	expect(await driver.findElement(By.id('name')).getAttribute('value')).toBe('Stein')
+})
+
+it('should display enterd name' ,async () => { 
+	const name = await driver.findElement(By.id('name'))
+	name.sendKeys('Stein')
+	await driver.findElement(By.id('submit')).click()
+	name.clear()
+	const value =  await driver.findElement(By.id('name')).getAttribute('value')
+	expect(value).toBe('Stein')
+})
+
 
 
 

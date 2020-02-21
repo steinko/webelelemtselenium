@@ -1,7 +1,7 @@
-import React , { Component } from 'react'
+import React  from 'react'
 
 function  ListItem  (props) {
-    return ( <li key = {props.key}>{props.value}</li>)
+    return ( <li key = {props.id}>{props.value}</li>)
 }
 
 export default ListItem
