@@ -4,7 +4,7 @@ node_js:
 install:
   - curl https://sdk.cloud.google.com > install.sh
   - bash install.sh --disable-prompts
-  - gcloud init
+  - gcloud init --console-only --skip-diagnostics
   - cd ./frontend
   - npm i
   - gcloud set zone europe-west
@@ -12,6 +12,7 @@ install:
   - gcloud set account springboot20@appspot.gserviceaccount.com
   - gcloud set project springboot20
   - gcloud kms decrypt --location=global --keyring=deploymentKeyRing --key=deploymentKey --ciphertext-file=springboot20-82a16b6e2c64.enc --plaintext-file=springboot20-82a16b6e2c64.json
+  - gcloud auth activate-service-account --key-file=springboot15-6a8d72380225.json
 script:
   - npm test -- --watchAll=false
 deploy:
