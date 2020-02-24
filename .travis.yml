@@ -6,8 +6,8 @@ install:
   - bash install.sh --disable-prompts
   - cd ./frontend
   - npm i
-  - gcloud config set zone europe-west
-  - gcloud config set region europe-west1
+  - gcloud config set comput/zone europe-west
+  - gcloud config set compute/region europe-west1
   - gcloud config set account springboot20@appspot.gserviceaccount.com
   - gcloud config set project springboot20
   - gcloud kms decrypt --location=global --keyring=deploymentKeyRing --key=deploymentKey --ciphertext-file=springboot20-82a16b6e2c64.enc --plaintext-file=springboot20-82a16b6e2c64.json
