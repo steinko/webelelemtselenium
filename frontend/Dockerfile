@@ -1,0 +1,7 @@
+FROM mhart/alpine-node:13.7.0 
+WORKDIR /app
+COPY / .
+RUN npm install
+RUN npm run build
+RUN npm install -g serve
+CMD ["serve", "-p", "8080", "-s", "/app/build"]
