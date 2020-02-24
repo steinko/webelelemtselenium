@@ -4,7 +4,6 @@ node_js:
 install:
   - curl https://sdk.cloud.google.com > install.sh
   - bash install.sh --disable-prompts
-  - exec -l $SHELL
   - gcloud init
   - cd ./frontend
   - npm i
