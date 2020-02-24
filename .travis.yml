@@ -4,7 +4,6 @@ node_js:
 install:
   - curl https://sdk.cloud.google.com > install.sh
   - bash install.sh --disable-prompts
-  - gcloud init --console-only --skip-diagnostics --quiet
   - cd ./frontend
   - npm i
   - gcloud set zone europe-west
