@@ -2,7 +2,8 @@ language: node_js
 node_js:
   - "stable"
 install:
-  - curl https://sdk.cloud.google.com | bash
+  - curl https://sdk.cloud.google.com > install.sh
+  - bash install.sh --disable-prompts
   - exec -l $SHELL
   - gcloud init
   - cd ./frontend
