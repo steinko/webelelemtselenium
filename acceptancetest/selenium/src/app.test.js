@@ -76,6 +76,16 @@ it('should display enterd name' ,async () => {
 	expect(value).toBe('Stein')
 })
 
+it('should display checked radio button' ,async () => { 
+	const option1 = await driver.findElement(By.id('option1'))
+	const option2 = await driver.findElement(By.id('option2'))
+	expect(await option1.getAttribute('checked')).toBeTruthy()
+	expect(await option2.getAttribute('checked')).toBeFalsy()
+	await option2.click()
+	expect(await option1.getAttribute('checked')).toBeFalsy()
+	expect(await option2.getAttribute('checked')).toBeTruthy()
+})
+
 
 
 
