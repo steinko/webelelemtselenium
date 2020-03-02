@@ -6,7 +6,7 @@ it('should exist', () => {
 	expect(render(<RadioButton />)).not.toBeNull()
 })
 
-it('should be false', () => {
+it('should  devliver radiobuttons where  option1 false and  option2 true ', () => {
 	const {getByLabelText} = render(<RadioButton />)
 	const option1 = getByLabelText('Option 1')
 	const option2 = getByLabelText('Option 2')
@@ -15,7 +15,7 @@ it('should be false', () => {
 	fireEvent.click(option2)
 	expect(option2.checked).toBeTruthy()
 	expect(option1.checked).toBeFalsy()
-
-
 })
+
+ 
  

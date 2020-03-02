@@ -7,8 +7,11 @@ import Food from './Food'
 import NumberList from './NumberList'
 import Name from './Name'
 import RadioButton from './RadioButton/Radiobutton'
+import CheckBoxes from './CheckBoxes/CheckBoxes'
+
 
 const numbers = [0,1, 2, 3, 4];
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +22,7 @@ function App() {
       <NumberList numbers={numbers}/>
       <Name/>
       <RadioButton/>
+      <CheckBoxes />
     </div>
   );
 }

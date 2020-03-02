@@ -86,6 +86,19 @@ it('should display checked radio button' ,async () => {
 	expect(await option2.getAttribute('checked')).toBeTruthy()
 })
 
+it('should display clicked checkboxes ' ,async () => { 
+	const option1 = await driver.findElement(By.id('One'))
+	const option2 = await driver.findElement(By.id('Two'))
+	expect(await option1.getAttribute('checked')).toBeFalsy()
+	expect(await option2.getAttribute('checked')).toBeFalsy()
+	await option2.click()
+	expect(await option1.getAttribute('checked')).toBeFalsy()
+	expect(await option2.getAttribute('checked')).toBeTruthy()
+})
+
+
+
+
 
 
 

@@ -23,7 +23,7 @@ class RadioButton extends Component {
 		   <input 
 			 type = "radio" 
 			 id = "option1"
-			  value="option1"
+			 value="option1"
 			 checked={this.state.selectedOption === "option1"}
 			 onChange={this.handleOptionChange}
 		   />

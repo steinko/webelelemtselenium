@@ -17,9 +17,9 @@ beforeAll(async ()=>{
      .build();
  })
 
-afterAll(async ()=>{ 
-   await driver.quit()
- })
+//afterAll(async ()=>{ 
+//   await driver.quit()
+// })
 
 it('should do nothing', ()=> { })
 
