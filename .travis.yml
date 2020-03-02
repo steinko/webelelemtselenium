@@ -2,19 +2,8 @@ language: node_js
 node_js:
   - "stable"
 install:
-  - curl https://sdk.cloud.google.com > install.sh
-  - bash install.sh --disable-prompts
+  
   - cd ./frontend
   - npm i
-  - gcloud config set compute/zone europe-west
-  - gcloud config set compute/region europe-west1
-  - gcloud config set account springboot20@appspot.gserviceaccount.com
-  - gcloud config set project springboot20
-  - gcloud kms decrypt --location=global --keyring=deploymentKeyRing --key=deploymentKey --ciphertext-file=springboot20-82a16b6e2c64.enc --plaintext-file=springboot20-82a16b6e2c64.json
-  - gcloud auth activate-service-account --key-file=springboot15-6a8d72380225.json
 script:
   - npm test -- --watchAll=false
-deploy:
-  provider: gae
-  keyfile: springboot20-82a16b6e2c64.json
-  project: springboot20  
