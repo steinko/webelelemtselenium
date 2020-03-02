@@ -6,7 +6,7 @@ import Planets from './Planets'
 import Food from './Food'
 import NumberList from './NumberList'
 import Name from './Name'
-import RadioButton from './RadioButton/Radiobutton'
+import RadioButton from './RadioButton/RadioButton'
 import CheckBoxes from './CheckBoxes/CheckBoxes'
 
 
